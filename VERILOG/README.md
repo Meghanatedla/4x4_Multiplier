@@ -16,5 +16,5 @@ Execute the compiled file:
 ```
 To open GTKWave:
 ```
- gtkwave <output file>.vcd
+    gtkwave <output file>.vcd
 ```
