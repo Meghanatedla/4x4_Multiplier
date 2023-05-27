@@ -14,4 +14,4 @@ In terminal
 ```
 
 
->Note: The python script in the `MULTIPLIER` folder is to print the values of leakage currents into a text file for all possible input comminations.
+>Note: The python script in the `MULTIPLIER` folder is to print the values of leakage currents into a text file for all possible input combinations.
