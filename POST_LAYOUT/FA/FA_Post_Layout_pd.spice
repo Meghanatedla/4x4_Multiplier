@@ -1,0 +1,212 @@
+* SPICE3 file created from FA.ext - technology: scmos
+
+.include ../TSMC_180nm.txt
+
+.option scale=0.09u
+
+*PARAMETERS
+.param supply=1
+
+.global gnd vdd
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+M1000 SUM a_n25_n513# VDD w_n88_n472# CMOSP w=8 l=2
++  ad=56 pd=30 as=324 ps=176
+M1001 a_n14_n513# A GND Gnd CMOSN w=4 l=2
++  ad=132 pd=82 as=140 ps=110
+M1002 a_n61_n513# B a_n67_n466# w_n88_n472# CMOSP w=8 l=2
++  ad=48 pd=28 as=32 ps=24
+M1003 a_n31_n466# A a_n37_n466# w_n88_n472# CMOSP w=8 l=2
++  ad=32 pd=24 as=32 ps=24
+M1004 a_n82_n466# C a_n61_n513# w_n88_n472# CMOSP w=8 l=2
++  ad=88 pd=54 as=0 ps=0
+M1005 a_n75_n513# C GND Gnd CMOSN w=4 l=2
++  ad=52 pd=34 as=0 ps=0
+M1006 VDD A a_n82_n466# w_n88_n472# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 a_n25_n513# C a_n31_n513# Gnd CMOSN w=4 l=2
++  ad=100 pd=58 as=16 ps=16
+M1008 VDD B a_n82_n466# w_n88_n472# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 GND C a_n14_n513# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 SUM a_n25_n513# GND Gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=0 ps=0
+M1011 a_n67_n466# A VDD w_n88_n472# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1012 a_n37_n466# B VDD w_n88_n472# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1013 a_n14_n466# a_n61_n513# a_n25_n513# w_n88_n472# CMOSP w=8 l=2
++  ad=136 pd=66 as=72 ps=34
+M1014 a_n61_n513# B a_n67_n513# Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=16 ps=16
+M1015 CARRY a_n61_n513# VDD w_n88_n472# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1016 a_n31_n513# A a_n37_n513# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=16 ps=16
+M1017 a_n82_n513# C a_n61_n513# Gnd CMOSN w=4 l=2
++  ad=44 pd=38 as=0 ps=0
+M1018 a_n75_n513# A a_n82_n513# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1019 GND B a_n82_n513# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1020 VDD B a_n14_n466# w_n88_n472# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1021 a_n67_n513# A a_n75_n513# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1022 a_n37_n513# B GND Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1023 a_n14_n466# A VDD w_n88_n472# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1024 a_n14_n513# a_n61_n513# a_n25_n513# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1025 CARRY a_n61_n513# GND Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1026 GND B a_n14_n513# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1027 a_n25_n513# C a_n31_n466# w_n88_n472# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1028 VDD C a_n14_n466# w_n88_n472# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 VDD CARRY 0.08fF
+C1 a_n25_n513# SUM 0.03fF
+C2 C a_n14_n466# 0.08fF
+C3 SUM GND 0.03fF
+C4 a_n14_n466# A 0.08fF
+C5 C A 0.50fF
+C6 w_n88_n472# a_n61_n513# 0.15fF
+C7 a_n82_n466# a_n61_n513# 0.12fF
+C8 B a_n61_n513# 0.31fF
+C9 a_n14_n513# a_n61_n513# 0.09fF
+C10 a_n25_n513# w_n88_n472# 0.09fF
+C11 CARRY a_n61_n513# 0.07fF
+C12 B a_n25_n513# 0.28fF
+C13 a_n82_n513# a_n61_n513# 0.12fF
+C14 a_n25_n513# a_n14_n513# 0.13fF
+C15 a_n14_n466# w_n88_n472# 0.06fF
+C16 a_n14_n513# GND 0.07fF
+C17 C w_n88_n472# 0.19fF
+C18 CARRY GND 0.04fF
+C19 A w_n88_n472# 0.89fF
+C20 B C 0.43fF
+C21 a_n82_n466# A 0.08fF
+C22 a_n82_n513# GND 0.49fF
+C23 a_n14_n466# VDD 0.25fF
+C24 C a_n14_n513# 0.08fF
+C25 B A 0.91fF
+C26 w_n88_n472# SUM 0.03fF
+C27 A a_n14_n513# 0.08fF
+C28 VDD A 0.67fF
+C29 C a_n82_n513# 0.29fF
+C30 a_n25_n513# a_n61_n513# 0.14fF
+C31 VDD SUM 0.07fF
+C32 GND a_n61_n513# 0.08fF
+C33 SUM CARRY 0.17fF
+C34 a_n82_n466# w_n88_n472# 0.12fF
+C35 C a_n61_n513# 0.17fF
+C36 B w_n88_n472# 0.67fF
+C37 B a_n82_n466# 0.16fF
+C38 A a_n61_n513# 0.08fF
+C39 VDD w_n88_n472# 0.56fF
+C40 a_n82_n466# VDD 0.65fF
+C41 B a_n14_n513# 0.14fF
+C42 w_n88_n472# CARRY 0.02fF
+C43 SUM a_n61_n513# 0.13fF
+C44 a_n25_n513# C 0.08fF
+C45 B VDD 0.09fF
+C46 a_n25_n513# A 0.08fF
+C47 C GND 0.08fF
+C48 GND Gnd 0.25fF
+C49 a_n82_n513# Gnd 0.12fF
+C50 a_n14_n513# Gnd 0.10fF
+C51 CARRY Gnd 0.17fF
+C52 SUM Gnd 0.43fF
+C53 a_n14_n466# Gnd 0.03fF
+C54 a_n25_n513# Gnd 0.09fF
+C55 a_n61_n513# Gnd 0.20fF
+C56 C Gnd 0.93fF
+C57 B Gnd 1.45fF
+C58 A Gnd 0.75fF
+C59 w_n88_n472# Gnd 2.39fF
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*INPUT WAVEFORM
+VinA A gnd pulse(0 1 0 100p 100p 10n 20n 0)
+VinB B gnd pulse(0 1 0 100p 100p 25n 50n 0) 
+VinC C gnd pulse(0 1 0 100p 100p 40n 80n 0)
+
+*ANALYSIS
+.tran 0.1n 0.4u
+
+.measure tran delay_LH_A_Sum
++ TRIG v(A) val = 0.5 fall = 2
++ TARG v(SUM) val = 0.5 rise = 3
+.measure tran delay_HL_A_Sum
++ TRIG v(A) val = 0.5 rise = 4
++ TARG v(SUM) val = 0.5 fall = 5
+.measure tran pd_A_Sum
++param='(delay_HL_A_Sum+delay_LH_A_Sum)/2' goal=0
+
+.measure tran delay_LH_B_Sum
++ TRIG v(B) val = 0.5 fall = 3
++ TARG v(SUM) val = 0.5 rise = 9
+.measure tran delay_HL_B_Sum
++ TRIG v(B) val = 0.5 rise = 2
++ TARG v(SUM) val = 0.5 fall = 4
+.measure tran pd_B_Sum
++param='(delay_HL_B_Sum+delay_LH_B_Sum)/2' goal=0
+
+.measure tran delay_LH_C_Sum
++ TRIG v(C) val = 0.5 fall = 1
++ TARG v(SUM) val = 0.5 rise = 4
+.measure tran delay_HL_C_Sum
++ TRIG v(C) val = 0.5 fall = 3
++ TARG v(SUM) val = 0.5 fall = 13
+.measure tran pd_C_Sum
++param='(delay_HL_C_Sum+delay_LH_C_Sum)/2' goal=0
+
+**********************************************************
+.measure tran delay_LH_A_Carry
++ TRIG v(A) val = 0.5 rise = 6
++ TARG v(CARRY) val = 0.5 rise = 6
+.measure tran delay_HL_A_Carry
++ TRIG v(A) val = 0.5 rise = 3
++ TARG v(CARRY) val = 0.5 fall = 2
+.measure tran pd_A_Carry
++param='(delay_HL_A_Carry+delay_LH_A_Carry)/2' goal=0
+
+.measure tran delay_LH_B_Carry
++ TRIG v(B) val = 0.5 rise = 3
++ TARG v(CARRY) val = 0.5 rise = 6
+.measure tran delay_HL_B_Carry
++ TRIG v(B) val = 0.5 rise = 2
++ TARG v(CARRY) val = 0.5 fall = 3
+.measure tran pd_B_Carry
++param='(delay_HL_B_Carry+delay_LH_B_Carry)/2' goal=0
+
+.measure tran delay_LH_C_Carry
++ TRIG v(C) val = 0.5 rise = 3
++ TARG v(CARRY) val = 0.5 rise = 8
+.measure tran delay_HL_C_Carry
++ TRIG v(C) val = 0.5 fall = 1
++ TARG v(CARRY) val = 0.5 fall = 2
+.measure tran pd_C_Carry
++param='(delay_HL_C_Carry+delay_LH_C_Carry)/2' goal=0
+
+**********************************************************
+
+*CONTROL COMMANDS
+.CONTROL
+set hcopypscolor = 1 
+set color0=white 
+set color1=black 
+
+run
+hardcopy FA_Post_Layout.eps v(A)+8 v(B)+6 v(C)+4 v(SUM)+2 v(CARRY)
+
+.endc
+

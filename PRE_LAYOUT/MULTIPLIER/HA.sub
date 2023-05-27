@@ -1,0 +1,24 @@
+**Implementation of Half Adder in a subckt
+
+.INCLUDE INVERTER.sub
+.INCLUDE AND.sub
+
+.subckt HA nodeA nodeB Vdd Gnd SUM CARRY
+
+xInv1 nodeA Vdd Gnd nodeA_ INVERTER
+xInv2 nodeB Vdd Gnd nodeB_ INVERTER
+
+**SUM is the XOR of A and B
+Mp1 node1  nodeA_   Vdd    Vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp2  SUM   nodeB   node1   Vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp3 node2  nodeA    Vdd    Vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp4  SUM   nodeB_  node2   Vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn1  SUM   nodeA_  node3   Gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn2 node3  nodeB_   Gnd    Gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn3  SUM   nodeA   node4   Gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn4 node4  nodeB    Gnd    Gnd   CMOSN W={2*Width_n} L={Length_n}
+
+**CARRY is AND of A and B
+xAnd nodeA nodeB Vdd Gnd CARRY AND
+
+.ends HA

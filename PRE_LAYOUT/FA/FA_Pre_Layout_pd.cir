@@ -1,0 +1,211 @@
+*** FULL ADDER
+
+.INCLUDE ../TSMC_180nm.txt
+.INCLUDE ../MULTIPLIER/INVERTER.sub
+
+
+*PARAMETERS
+.PARAM X=90nm
+
+.PARAM Width_p=4*X
+.PARAM Length_p=2*X
+
+.PARAM Width_n=2*X
+.PARAM Length_n=2*X
+
+.PARAM supply=1
+.global gnd vdd
+
+.temp 25
+
+*NET-LIST
+
+*FULL ADDER
+
+*CARRY
+*  -------------------------------------------------------VDD
+*          |           |                   | 
+*   A -- |Mp1|   B --|Mp2|          B -- |Mp4|    
+*          |           |                   | 
+*          -------------                   |-------node3
+*                |                         |
+*                ---------node1     A -- |Mp5|
+*                |                         |
+*         ---- |Mp3|                       |         _____
+*    C____|      |_________________________|_________CARRY____|inverter|___CARRY     
+*         |      |                         |
+*         ---- |Mn3|                       |
+*                |                         |
+*                ---------node2     A -- |Mn5|
+*                |                         |
+*          -------------                   |-------node4
+*          |           |                   |    
+*   A -- |Mn1|   B --|Mn2|          B -- |Mn4|     
+*          |           |                   | 
+* -------------------------------------------------------GND   
+
+*SUM
+*--------------------------------------------------------VDD
+*         |            |            |              |
+*  A -- |Mp6|   B -- |Mp7|   C -- |Mp8|     A -- |Mp10|
+*         |____________|____________|              |______node7
+*                      |                           |
+*                      ---------node5       B -- |Mp11|
+*                      |                           |______node8
+*               -----|Mp9|                         |
+*              |       |                    C -- |Mp12|
+*     _____    |       |                           |              ___
+*     CARRY ---        ------------------------------------SUM---|inverter|----SUM
+*              |       |                           |
+*              |       |                    C -- |Mn12|
+*               -----|Mn9|                         |______node9
+*                      |                           |
+*                      ---------node6        B -- |Mn11|
+*         _____________|____________               |______node10 
+*         |            |            |              |
+*  A -- |Mn6|   B -- |Mn7|   C -- |Mn8|     A -- |Mn10|
+*         |            |            |              |
+*--------------------------------------------------------GND
+*
+
+* A B and C are inputs 
+* CARRY and SUM are the outputs 
+
+Mp1 node1  A  vdd  vdd CMOSP W={2*Width_p} L={Length_p}
+Mp2 node1  B  vdd  vdd CMOSP W={2*Width_p} L={Length_p}
+Mp3 CARRY_ C node1 vdd CMOSP W={2*Width_p} L={Length_p}
+
+Mn1 node2  A  gnd  gnd CMOSN W={2*Width_n} L={Length_n}
+Mn2 node2  B  gnd  gnd CMOSN W={2*Width_n} L={Length_n}
+Mn3 CARRY_ C node2 gnd CMOSN W={2*Width_n} L={Length_n}
+
+Mp4 node3  B  vdd  vdd CMOSP W={2*Width_p} L={Length_p}
+Mp5 CARRY_ A node3 vdd CMOSP W={2*Width_p} L={Length_p}
+
+Mn4 node4  B  gnd  gnd CMOSN W={2*Width_n} L={Length_n}
+Mn5 CARRY_ A node4 gnd CMOSN W={2*Width_n} L={Length_n}
+
+xinv1 CARRY_ vdd gnd CARRY INVERTER
+
+Mp6 node5   A     vdd   vdd CMOSP W={2*Width_p} L={Length_p}
+Mp7 node5   B     vdd   vdd CMOSP W={2*Width_p} L={Length_p}
+Mp8 node5   C     vdd   vdd CMOSP W={2*Width_p} L={Length_p}
+Mp9 SUM_  CARRY_ node5  vdd CMOSP W={2*Width_p} L={Length_p}
+
+Mn6 node6   A     gnd   gnd CMOSN W={2*Width_n} L={Length_n}
+Mn7 node6   B     gnd   gnd CMOSN W={2*Width_n} L={Length_n}
+Mn8 node6   C     gnd   gnd CMOSN W={2*Width_n} L={Length_n}
+Mn9 SUM_  CARRY_ node6  gnd CMOSN W={2*Width_n} L={Length_n}
+
+Mp10 node7  A   vdd   vdd CMOSP W={2*Width_p} L={Length_p}
+Mp11 node8  B  node7  vdd CMOSP W={2*Width_p} L={Length_p}
+Mp12 SUM_   C  node8  vdd CMOSP W={2*Width_p} L={Length_p}
+
+Mn10 node10 A   gnd   gnd CMOSN W={2*Width_n} L={Length_n}
+Mn11 node9  B  node10 gnd CMOSN W={2*Width_n} L={Length_n}
+Mn12 SUM_   C  node9  gnd CMOSN W={2*Width_n} L={Length_n}
+
+xinv2 SUM_ vdd gnd SUM INVERTER
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*Capacitive LOAD
+CL1 SUM gnd 2f
+CL2 CARRY gnd 2f
+
+*INPUT WAVEFORM
+VinA A gnd pulse(0 1 0 100p 100p 10n 20n 0)
+VinB B gnd pulse(0 1 0 100p 100p 25n 50n 0) 
+VinC C gnd pulse(0 1 0 100p 100p 40n 80n 0)
+
+*ANALYSIS
+
+.tran 0.1n 0.4u
+
+.measure tran delay_LH_Carry_inv
++ TRIG v(CARRY_) val = 0.5 fall = 1
++ TARG v(CARRY) val = 0.5 rise = 1
+.measure tran delay_HL_Carry_inv
++ TRIG v(CARRY_) val = 0.5 rise = 1
++ TARG v(CARRY) val = 0.5 fall = 1
+.measure tran pd_Carry_inv
++param='(delay_HL_Carry_inv+delay_LH_Carry_inv)/2' goal=0
+
+.measure tran delay_LH_Sum_inv
++ TRIG v(SUM_) val = 0.5 fall = 1
++ TARG v(SUM) val = 0.5 rise = 1
+.measure tran delay_HL_Sum_inv
++ TRIG v(SUM_) val = 0.5 rise = 1
++ TARG v(SUM) val = 0.5 fall = 1
+.measure tran pd_Sum_inv
++param='(delay_HL_Sum_inv+delay_LH_Sum_inv)/2' goal=0
+
+*********************************************************
+.measure tran delay_LH_A_Sum
++ TRIG v(A) val = 0.5 fall = 2
++ TARG v(SUM) val = 0.5 rise = 3
+.measure tran delay_HL_A_Sum
++ TRIG v(A) val = 0.5 rise = 4
++ TARG v(SUM) val = 0.5 fall = 5
+.measure tran pd_A_Sum
++param='(delay_HL_A_Sum+delay_LH_A_Sum)/2' goal=0
+
+.measure tran delay_LH_B_Sum
++ TRIG v(B) val = 0.5 fall = 3
++ TARG v(SUM) val = 0.5 rise = 9
+.measure tran delay_HL_B_Sum
++ TRIG v(B) val = 0.5 rise = 2
++ TARG v(SUM) val = 0.5 fall = 4
+.measure tran pd_B_Sum
++param='(delay_HL_B_Sum+delay_LH_B_Sum)/2' goal=0
+
+.measure tran delay_LH_C_Sum
++ TRIG v(C) val = 0.5 fall = 1
++ TARG v(SUM) val = 0.5 rise = 4
+.measure tran delay_HL_C_Sum
++ TRIG v(C) val = 0.5 fall = 3
++ TARG v(SUM) val = 0.5 fall = 13
+.measure tran pd_C_Sum
++param='(delay_HL_C_Sum+delay_LH_C_Sum)/2' goal=0
+
+**********************************************************
+.measure tran delay_LH_A_Carry
++ TRIG v(A) val = 0.5 rise = 6
++ TARG v(CARRY) val = 0.5 rise = 6
+.measure tran delay_HL_A_Carry
++ TRIG v(A) val = 0.5 rise = 3
++ TARG v(CARRY) val = 0.5 fall = 2
+.measure tran pd_A_Carry
++param='(delay_HL_A_Carry+delay_LH_A_Carry)/2' goal=0
+
+.measure tran delay_LH_B_Carry
++ TRIG v(B) val = 0.5 rise = 3
++ TARG v(CARRY) val = 0.5 rise = 6
+.measure tran delay_HL_B_Carry
++ TRIG v(B) val = 0.5 rise = 2
++ TARG v(CARRY) val = 0.5 fall = 3
+.measure tran pd_B_Carry
++param='(delay_HL_B_Carry+delay_LH_B_Carry)/2' goal=0
+
+.measure tran delay_LH_C_Carry
++ TRIG v(C) val = 0.5 rise = 3
++ TARG v(CARRY) val = 0.5 rise = 8
+.measure tran delay_HL_C_Carry
++ TRIG v(C) val = 0.5 fall = 1
++ TARG v(CARRY) val = 0.5 fall = 2
+.measure tran pd_C_Carry
++param='(delay_HL_C_Carry+delay_LH_C_Carry)/2' goal=0
+
+**********************************************************
+
+*CONTROL COMMANDS
+.CONTROL
+set hcopypscolor = 1 
+set color0=white 
+set color1=black 
+
+run
+hardcopy FA_Pre_Layout.eps v(A)+8 v(B)+6 v(C)+4 v(SUM)+2 v(CARRY)
+
+.endc

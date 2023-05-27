@@ -1,0 +1,26 @@
+VA = 0 VB = 0 VC = 0
+Leakage Power = 3.3387E-11
+
+VA = 0 VB = 0 VC = 1
+Leakage Power = 3.73508E-11
+
+VA = 0 VB = 1 VC = 0
+Leakage Power = 3.91323E-11
+
+VA = 0 VB = 1 VC = 1
+Leakage Power = 3.59227E-11
+
+VA = 1 VB = 0 VC = 0
+Leakage Power = 3.11265E-11
+
+VA = 1 VB = 0 VC = 1
+Leakage Power = 3.96673E-11
+
+VA = 1 VB = 1 VC = 0
+Leakage Power = 3.97958E-11
+
+VA = 1 VB = 1 VC = 1
+Leakage Power = 4.11446E-11
+
+
+

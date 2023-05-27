@@ -1,0 +1,98 @@
+*** 2 INPUT AND GATE
+
+.INCLUDE ../TSMC_180nm.txt
+
+*PARAMETERS
+.PARAM X=90nm
+
+.PARAM Width_p=4*X
+.PARAM Length_p=2*X
+
+.PARAM Width_n=2*X
+.PARAM Length_n=2*X
+
+.PARAM supply=1
+.global gnd vdd
+
+.temp 25
+
+*OPTIONS
+.OPTION GMIN=1e-020 ABSTOL=1e-18
+
+*NET-LIST
+
+* AND GATE
+*       ----------------------------------------VDD
+*          |           |                     |
+*   A -- |Mp1|   B --|Mp2|                   |
+*          |           |                     |
+*          -------------             ______|Mp3|
+*                |                  |        |
+*                ---------node1-----|        |--------C
+*                |                  |        |
+*         A -- |Mn1|                |______|Mn3|
+*                |________node2              |
+*                |                           |
+*         B -- |Mn2|                         |
+*                |                           |
+*        ---------------------------------------GND
+
+*A and B are INPUTS
+*C os OUTPUT
+
+*node1 is output of NAND gate
+*node2 is the common terminal for the 2 NMOS transistors
+
+Mp1 node1   A     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp2 node1   B     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn1 node1   A    node2  gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn2 node2   B     gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+Mp3   C   node1   vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn3   C   node1   gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*Capacitive LOAD
+CL C gnd 2f
+
+*INPUT WAVEFORM
+VinA A gnd 0
+VinB B gnd 0
+
+*ANALYSIS
+.op
+
+*CONTROL COMMANDS
+.CONTROL
+    alter VinA = 0
+    alter VinB = 0
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 0 VB = 0">>"AND_Pre_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"AND_Pre_Layout_leakage.txt"
+
+    alter VinA = 0
+    alter VinB = 1
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 0 VB = 1">>"AND_Pre_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"AND_Pre_Layout_leakage.txt"
+
+    alter VinA = 1
+    alter VinB = 0
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 1 VB = 0">>"AND_Pre_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"AND_Pre_Layout_leakage.txt"
+
+    alter VinA = 1
+    alter VinB = 1
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 1 VB = 1">>"AND_Pre_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"AND_Pre_Layout_leakage.txt"
+
+.ENDC
+.END

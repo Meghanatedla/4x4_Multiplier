@@ -1,0 +1,196 @@
+*** HALF ADDER
+
+.INCLUDE ../TSMC_180nm.txt
+.INCLUDE ../MULTIPLIER/INVERTER.sub
+
+*PARAMETERS
+.PARAM X=90nm
+
+.PARAM Width_p=4*X
+.PARAM Length_p=2*X
+
+.PARAM Width_n=2*X
+.PARAM Length_n=2*X
+
+.PARAM supply=1
+.global gnd vdd
+
+.temp 25
+
+*NET-LIST
+
+*HALF ADDER
+
+*SUM
+*       -------------------VDD
+*           |            |                     
+*   A' -- |Mp1|  A  -- |Mp3|                   
+*           |            |  
+*  node1-----            -----node2
+*           |            |                   
+*   B  -- |Mp2|  B' -- |Mp4|        
+*           |____________|
+*                 |                  
+*                 ---------SUM
+*                 |  
+*           ______|______                
+*           |            |                     
+*   A' -- |Mn1|   A -- |Mn3|                   
+*           |            |    
+*  node3-----            -----node4
+*           |            |                     
+*   B' -- |Mn2|   B -- |Mn4|        
+*           |____________|
+*                 |                         
+*        -----------------GND
+
+*CARRY
+*       ----------------------------------------VDD
+*          |           |                     |
+*   A -- |Mp5|   B --|Mp6|                   |
+*          |           |                     |
+*          -------------             ______|Mp7|
+*                |                  |        |
+*                ---------node5-----|        |--------CARRY
+*                |                  |        |
+*         A -- |Mn5|                |______|Mn7|
+*                |________node6              |
+*                |                           |
+*         B -- |Mn6|                         |
+*                |                           |
+*        ---------------------------------------GND
+
+*A and B are INPUTS
+*A and A_
+xinv1 A vdd gnd A_ INVERTER
+
+*B and B_
+xinvv2 B vdd gnd B_ INVERTER
+
+Mp1 node1   A_     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp2 SUM     B     node1  vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp3 node2   A      vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp4 SUM     B_    node2  vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn1 SUM     A_    node3  gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn2 node3   B_     gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn3 SUM     A     node4  gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn4 node4   B      gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+
+Mp5 node5    A     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp6 node5    B     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn5 node5    A    node6  gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn6 node6    B     gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+Mp7 CARRY  node5   vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn7 CARRY  node5   gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*Capacitive LOAD
+CL1 SUM gnd 2f
+CL2 CARRY gnd 2f
+
+*INPUT WAVEFORM
+VinA A gnd pulse(0 1 0 100p 100p 10n 20n 0)
+VinB B gnd pulse(0 1 0 100p 100p 23n 46n 0)
+
+*ANALYSIS
+
+.tran 0.1n 0.2u
+.measure tran delay_LH_A_inv
++ TRIG v(A) val = 0.5 fall = 1
++ TARG v(A_) val = 0.5 rise = 1
+.measure tran delay_HL_A_inv
++ TRIG v(A) val = 0.5 rise = 1
++ TARG v(A_) val = 0.5 fall = 1
+.measure tran pd_A_inv
++param='(delay_HL_A_inv+delay_LH_A_inv)/2' goal=0
+*****************************************************
+
+.tran 0.1n 0.2u
+.measure tran delay_LH_B_inv
++ TRIG v(B) val = 0.5 fall = 1
++ TARG v(B_) val = 0.5 rise = 1
+.measure tran delay_HL_B_inv
++ TRIG v(B) val = 0.5 rise = 1
++ TARG v(B_) val = 0.5 fall = 1
+.measure tran pd_B_inv
++param='(delay_HL_B_inv+delay_LH_B_inv)/2' goal=0
+*****************************************************
+
+.tran 0.1n 0.2u
+.measure tran delay_LH_A_Carry
++ TRIG v(A) val = 0.5 rise = 1
++ TARG V(CARRY) val = 0.5 rise = 1
+.measure tran delay_HL_A_Carry
++ TRIG v(A) val = 0.5 fall = 1
++ TARG v(CARRY) val = 0.5 fall = 1
+.measure tran pd_A_Carry
++param='(delay_HL_A_Carry+delay_LH_A_Carry)/2' goal=0
+******************************************************
+
+.tran 0.1n 0.2u
+.measure tran delay_LH_B_Carry
++ TRIG v(B) val = 0.5 rise = 1
++ TARG v(CARRY) val = 0.5 rise = 1
+.measure tran delay_HL_B_Carry
++ TRIG v(B) val = 0.5 fall = 1
++ TARG V(CARRY) val = 0.5 fall = 2
+.measure tran pd_B_Carry
++param='(delay_HL_B_Carry+delay_LH_B_Carry)/2' goal=0
+******************************************************
+
+.tran 0.1n 0.2u
+.measure tran delay_LH_A_Sum
++ TRIG v(A) val = 0.5 fall = 1
++ TARG V(SUM) val = 0.5 rise = 1
+.measure tran delay_HL_A_Sum
++ TRIG v(A) val = 0.5 rise = 2
++ TARG v(SUM) val = 0.5 fall = 1
+.measure tran pd_A_Sum
++param='(delay_HL_A_Sum+delay_LH_A_Sum)/2' goal=0
+******************************************************
+
+.tran 0.1n 0.2u
+.measure tran delay_LH_B_Sum
++ TRIG v(B) val = 0.5 fall = 1
++ TARG v(SUM) val = 0.5 rise = 2
+.measure tran delay_HL_B_Sum
++ TRIG v(B) val = 0.5 rise = 2
++ TARG V(SUM) val = 0.5 fall = 3
+.measure tran pd_B_Sum
++param='(delay_HL_B_Sum+delay_LH_B_Sum)/2' goal=0
+******************************************************
+
+.tran 0.1n 0.2u
+.measure tran delay_LH_Ainv_Sum
++ TRIG v(A_) val = 0.5 fall = 3
++ TARG V(SUM) val = 0.5 rise = 3
+.measure tran delay_HL_Ainv_Sum
++ TRIG v(A_) val = 0.5 rise = 2
++ TARG v(SUM) val = 0.5 fall = 2
+.measure tran pd_Ainv_Sum
++param='(delay_HL_Ainv_Sum+delay_LH_Ainv_Sum)/2' goal=0
+******************************************************
+
+.tran 0.1n 0.2u
+.measure tran delay_LH_Binv_Sum
++ TRIG v(B_) val = 0.5 fall = 3
++ TARG v(SUM) val = 0.5 rise = 7
+.measure tran delay_HL_Binv_Sum
++ TRIG v(B_) val = 0.5 rise = 2
++ TARG V(SUM) val = 0.5 fall = 5
+.measure tran pd_Binv_Sum
++param='(delay_HL_Binv_Sum+delay_LH_Binv_Sum)/2' goal=0
+******************************************************
+
+*CONTROL COMMANDS
+.CONTROL
+set hcopypscolor = 1 
+set color0=white 
+set color1=black 
+
+run
+hardcopy HA_Pre_Layout.eps v(A)+10 v(A_)+8 v(B)+6 v(B_)+4 v(SUM)+2 v(CARRY)
+
+.endc

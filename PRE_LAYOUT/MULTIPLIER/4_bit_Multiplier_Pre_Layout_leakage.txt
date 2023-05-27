@@ -1,0 +1,1026 @@
+LEAKAGE POWERS FOR ALL INPUT COMBINATIONS
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 8.91862E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 8.91862E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 8.91862E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 8.80132E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 8.91863E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 8.80132E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 8.80132E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 8.68402E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.03592E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 8.91862E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 8.91862E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 8.80132E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 8.91863E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 8.80132E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 8.80132E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 8.68402E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.26202E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.24698E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.28662E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.2716E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.19283E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.17779E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.21745E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.20243E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.24922E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.23418E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.27382E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.2588E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.18005E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.16501E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.20467E-06
+
+VA0 = 0 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.18965E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.26202E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.22892E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.13512E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.10203E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.19282E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.15972E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.06594E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.03285E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.26726E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.23416E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.14036E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.10727E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.19807E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.16497E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.07119E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.0381E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.37081E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.43999E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.38584E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.46912E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.34974E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.41894E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.41727E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.62678E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.48056E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.54974E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.49561E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.57889E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.62384E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.66835E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.51888E-06
+
+VA0 = 0 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.7284E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.26202E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.21088E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.17143E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.12031E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.21086E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.15972E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.12029E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.06916E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.17123E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.12009E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.08064E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.02952E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.12007E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.06893E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.0295E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 8.97837E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.37082E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.42194E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.42214E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.4733E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.36777E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.52878E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.41913E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.58207E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.38452E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.43566E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.54416E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.54414E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.38151E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.54251E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.72138E-06
+
+VA0 = 0 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.62572E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.37082E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.40388E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.27065E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.52275E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.36777E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.40085E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.44698E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.54965E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.40256E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.43563E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.30241E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.55451E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.41599E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.50513E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.47068E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.57335E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.47961E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.61496E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.52137E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.78069E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.5247E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.77184E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.72723E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.98061E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.61587E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.75123E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.94617E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.94689E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.89554E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 1.00062E-05
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.95877E-06
+
+VA0 = 0 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 1.02257E-05
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.26202E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.24698E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.18947E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.17444E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.22762E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.21258E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.15508E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.14005E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.20732E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.19228E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.13478E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.11975E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.17293E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.15789E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.10038E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.08535E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.37081E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.45804E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.44018E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.52743E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.38453E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.47176E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.45391E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.54117E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.42061E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.58389E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.48999E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.65328E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.43435E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.76519E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.50374E-06
+
+VA0 = 1 VA1 = 0 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.67355E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.37082E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.43998E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.28867E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.35787E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.38452E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.52973E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.3024E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.56139E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.43866E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.50783E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.46484E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.56087E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.45238E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.59759E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.6834E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.65918E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.47961E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.65105E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.53939E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.72496E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.54145E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.79548E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.65374E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 1.00416E-05
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.65196E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.89946E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.97111E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 1.01709E-05
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.87815E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 1.00249E-05
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.92627E-06
+
+VA0 = 1 VA1 = 0 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 1.01865E-05
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.37082E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.42195E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.325E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.61974E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.40256E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.45371E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.50234E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.68144E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.34263E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.39376E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.29681E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.59156E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.48818E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.61996E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.56342E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.74252E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.47961E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.63301E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.5757E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.8117E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.55947E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.82275E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.91494E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 1.00268E-05
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.55592E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.95294E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.76032E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.86257E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.95444E-06
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 1.00106E-05
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 1.0218E-05
+
+VA0 = 1 VA1 = 1 VA2 = 0 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 1.02269E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.47962E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.61496E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.42421E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.85463E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.55947E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 9.88463E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 9.79177E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 9.999E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.57397E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.70932E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.83172E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 9.97893E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.83786E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 1.00293E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 1.0045E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 0
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 1.02995E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.58841E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 9.82603E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 9.67493E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 1.01126E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 9.7164E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 1.01419E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 1.0072E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 0 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 1.03407E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 0
+Leakage Power = 9.78727E-06
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 0 VB3 = 1
+Leakage Power = 1.01075E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 0
+Leakage Power = 1.02706E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 0 VB2 = 1 VB3 = 1
+Leakage Power = 1.04463E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 0
+Leakage Power = 1.03174E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 0 VB3 = 1
+Leakage Power = 1.0774E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 0
+Leakage Power = 1.04958E-05
+
+VA0 = 1 VA1 = 1 VA2 = 1 VA3 = 1
+VB0 = 1 VB1 = 1 VB2 = 1 VB3 = 1
+Leakage Power = 1.08672E-05
+

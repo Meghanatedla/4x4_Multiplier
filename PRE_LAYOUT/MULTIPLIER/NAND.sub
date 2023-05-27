@@ -1,0 +1,11 @@
+**2 Input NAND Gate 
+
+.subckt NAND nodeA nodeB Vdd Gnd nodeC
+
+Mp1   nodeC   nodeA    Vdd   Vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp2   nodeC   nodeB    Vdd   Vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn1   node1   nodeA    Gnd   Gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn2   nodeC   nodeB   node1  Gnd   CMOSN W={2*Width_n} L={Length_n}
+
+.ends NAND
+

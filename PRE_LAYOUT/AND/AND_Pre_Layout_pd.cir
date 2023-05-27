@@ -1,0 +1,99 @@
+*** 2 INPUT AND GATE
+
+.INCLUDE ../TSMC_180nm.txt
+
+*PARAMETERS
+.PARAM X=90nm
+
+.PARAM Width_p=4*X
+.PARAM Length_p=2*X
+
+.PARAM Width_n=2*X
+.PARAM Length_n=2*X
+
+.PARAM supply=1
+.global gnd vdd
+
+.temp 25
+
+*NET-LIST
+
+* AND GATE
+*       ----------------------------------------VDD
+*          |           |                     |
+*   A -- |Mp1|   B --|Mp2|                   |
+*          |           |                     |
+*          -------------             ______|Mp3|
+*                |                  |        |
+*                ---------node1-----|        |--------C
+*                |                  |        |
+*         A -- |Mn1|                |______|Mn3|
+*                |________node2              |
+*                |                           |
+*         B -- |Mn2|                         |
+*                |                           |
+*        ---------------------------------------GND
+
+*A and B are INPUTS
+*C os OUTPUT
+
+*node1 is output of NAND gate
+*node2 is the common terminal for the 2 NMOS transistors
+
+Mp1 node1   A     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp2 node1   B     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn1 node1   A    node2  gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn2 node2   B     gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+Mp3   C   node1   vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn3   C   node1   gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*Capacitive LOAD
+CL C gnd 2f
+
+*INPUT WAVEFORM
+VinA A gnd pulse(0 1 0 100p 100p 10n 20n 0)
+VinB B gnd pulse(0 1 0 100p 100p 23n 46n 0)
+
+*ANALYSIS
+.tran 0.1n 0.2u
+
+.measure tran delay_LH_A
++ TRIG v(A) val = 0.5 rise = 1
++ TARG V(C) val = 0.5 rise = 1
+.measure tran delay_HL_A
++ TRIG v(A) val = 0.5 fall = 1
++ TARG v(C) val = 0.5 fall = 1
+.measure tran pd_A
++param='(delay_HL_A+delay_LH_A)/2' goal=0
+
+.tran 0.1n 0.2u
+
+.measure tran delay_LH_B
++ TRIG v(B) val = 0.5 rise = 1
++ TARG v(C) val = 0.5 rise = 1
+.measure tran delay_HL_B
++ TRIG v(B) val = 0.5 fall = 1
++ TARG V(C) val = 0.5 fall = 2
+.measure tran pd_B
++param='(delay_HL_B+delay_LH_B)/2' goal=0
+
+
+
+*CONTROL COMMANDS
+.CONTROL
+set hcopypscolor = 1 
+set color0=white 
+set color1=black 
+
+run
+hardcopy AND_Pre_Layout.eps v(B)+4 v(A)+2 v(C)
+
+plot V(A)+4 V(B)+2 V(C)
+.endc
+
+
+

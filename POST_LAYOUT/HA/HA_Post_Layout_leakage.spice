@@ -1,0 +1,152 @@
+* SPICE3 file created from HA.ext - technology: scmos
+
+.include ../TSMC_180nm.txt
+
+.option scale=0.09u
+
+*PARAMETERS
+.param supply=1
+
+.global gnd vdd
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*INPUT WAVEFORM
+VinA A gnd pulse(0 1 0 100p 100p 10n 20n 0)
+VinB B gnd pulse(0 1 0 100p 100p 23n 46n 0)
+
+M1000 a_n38_n315# A GND Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=128 ps=112
+M1001 a_6_n367# B GND Gnd CMOSN w=4 l=2
++  ad=28 pd=22 as=0 ps=0
+M1002 node1 B VDD w_6_n223# CMOSP w=8 l=2
++  ad=64 pd=32 as=288 ps=184
+M1003 CARRY node1 GND Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1004 a_5_n297# a_n38_n315# VDD w_n9_n303# CMOSP w=8 l=2
++  ad=64 pd=32 as=0 ps=0
+M1005 GND a_n38_n315# a_24_n367# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1006 VDD a_n38_n367# a_25_n297# w_n9_n303# CMOSP w=8 l=2
++  ad=0 pd=0 as=56 ps=30
+M1007 a_n38_n367# B GND Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1008 a_n38_n315# A VDD w_n51_n303# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1009 node1 A a_19_n245# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1010 a_25_n297# A SUM w_n9_n303# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1011 a_24_n367# a_n38_n367# SUM Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=28 ps=22
+M1012 CARRY node1 VDD w_6_n223# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1013 VDD A node1 w_6_n223# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1014 SUM A a_6_n367# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1015 a_19_n245# B GND Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1016 SUM B a_5_n297# w_n9_n303# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1017 a_n38_n367# B VDD w_n51_n355# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+C0 VDD w_n51_n355# 0.05fF
+C1 a_n38_n315# GND 0.07fF
+C2 VDD w_n9_n303# 0.11fF
+C3 A B 1.39fF
+C4 a_n38_n367# VDD 0.11fF
+C5 SUM A 0.12fF
+C6 VDD w_n51_n303# 0.05fF
+C7 CARRY w_6_n223# 0.03fF
+C8 a_n38_n315# VDD 0.72fF
+C9 VDD w_6_n223# 0.13fF
+C10 A w_n9_n303# 0.06fF
+C11 B w_n51_n355# 0.06fF
+C12 GND CARRY 0.04fF
+C13 a_n38_n367# A 0.18fF
+C14 A w_n51_n303# 0.06fF
+C15 node1 w_6_n223# 0.10fF
+C16 B w_n9_n303# 0.06fF
+C17 a_n38_n367# B 0.32fF
+C18 a_n38_n315# A 0.06fF
+C19 GND VDD 0.20fF
+C20 SUM w_n9_n303# 0.02fF
+C21 SUM a_n38_n367# 0.08fF
+C22 A w_6_n223# 0.06fF
+C23 GND node1 0.23fF
+C24 CARRY VDD 0.11fF
+C25 a_n38_n367# w_n51_n355# 0.03fF
+C26 SUM a_n38_n315# 0.08fF
+C27 B w_6_n223# 0.06fF
+C28 GND A 0.22fF
+C29 a_n38_n367# w_n9_n303# 0.06fF
+C30 CARRY node1 0.05fF
+C31 GND B 0.73fF
+C32 VDD node1 0.22fF
+C33 a_n38_n315# w_n9_n303# 0.19fF
+C34 a_n38_n367# a_n38_n315# 0.19fF
+C35 a_n38_n315# w_n51_n303# 0.03fF
+C36 VDD A 0.31fF
+C37 node1 A 0.12fF
+C38 VDD B 0.17fF
+C39 SUM VDD 0.03fF
+C40 a_n38_n367# GND 0.19fF
+C41 SUM Gnd 0.19fF
+C42 a_n38_n367# Gnd 0.32fF
+C43 a_n38_n315# Gnd 0.20fF
+C44 GND Gnd 0.69fF
+C45 CARRY Gnd 0.05fF
+C46 VDD Gnd 0.18fF
+C47 node1 Gnd 0.26fF
+C48 A Gnd 1.07fF
+C49 B Gnd 1.12fF
+C50 w_n51_n355# Gnd 0.48fF
+C51 w_n9_n303# Gnd 1.12fF
+C52 w_n51_n303# Gnd 0.48fF
+C53 w_6_n223# Gnd 1.00fF
+
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*INPUT WAVEFORM
+VinA A gnd 0
+VinB B gnd 0
+
+*ANALYSIS
+.op
+
+*CONTROL COMMANDS
+.CONTROL
+    alter VinA = 0
+    alter VinB = 0
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 0 VB = 0">>"HA_Post_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"HA_Post_Layout_leakage.txt"
+
+    alter VinA = 0
+    alter VinB = 1
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 0 VB = 1">>"HA_Post_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"HA_Post_Layout_leakage.txt"
+
+    alter VinA = 1
+    alter VinB = 0
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 1 VB = 0">>"HA_Post_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"HA_Post_Layout_leakage.txt"
+
+    alter VinA = 1
+    alter VinB = 1
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 1 VB = 1">>"HA_Post_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"HA_Post_Layout_leakage.txt"
+
+.ENDC
+.END

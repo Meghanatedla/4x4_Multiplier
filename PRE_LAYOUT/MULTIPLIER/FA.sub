@@ -1,0 +1,43 @@
+**Implementation of Half Adder in a subckt
+
+.INCLUDE INVERTER.sub
+
+.subckt FA nodeA nodeB nodeC Vdd Gnd SUM CARRY
+
+Mp1 node1  nodeA  Vdd  Vdd CMOSP W={2*Width_p} L={Length_p}
+Mp2 node1  nodeB  Vdd  Vdd CMOSP W={2*Width_p} L={Length_p}
+Mp3 CARRY_ nodeC node1 Vdd CMOSP W={2*Width_p} L={Length_p}
+
+Mn1 node2  nodeA  Gnd  Gnd CMOSN W={2*Width_n} L={Length_n}
+Mn2 node2  nodeB  Gnd  Gnd CMOSN W={2*Width_n} L={Length_n}
+Mn3 CARRY_ nodeC node2 Gnd CMOSN W={2*Width_n} L={Length_n}
+
+Mp4 node3  nodeB  Vdd  Vdd CMOSP W={2*Width_p} L={Length_p}
+Mp5 CARRY_ nodeA node3 Vdd CMOSP W={2*Width_p} L={Length_p}
+
+Mn4 node4  nodeB  Gnd  Gnd CMOSN W={2*Width_n} L={Length_n}
+Mn5 CARRY_ nodeA node4 Gnd CMOSN W={2*Width_n} L={Length_n}
+
+xinv1 CARRY_ Vdd Gnd CARRY INVERTER
+
+Mp6 node5  nodeA    Vdd   Vdd CMOSP W={2*Width_p} L={Length_p}
+Mp7 node5  nodeB    Vdd   Vdd CMOSP W={2*Width_p} L={Length_p}
+Mp8 node5  nodeC    Vdd   Vdd CMOSP W={2*Width_p} L={Length_p}
+Mp9 SUM_   CARRY_  node5  Vdd CMOSP W={2*Width_p} L={Length_p}
+
+Mn6 node6  nodeA    Gnd   Gnd CMOSN W={2*Width_n} L={Length_n}
+Mn7 node6  nodeB    Gnd   Gnd CMOSN W={2*Width_n} L={Length_n}
+Mn8 node6  nodeC    Gnd   Gnd CMOSN W={2*Width_n} L={Length_n}
+Mn9 SUM_   CARRY_  node6  Gnd CMOSN W={2*Width_n} L={Length_n}
+
+Mp10 node7  nodeA   Vdd   Vdd CMOSP W={2*Width_p} L={Length_p}
+Mp11 node8  nodeB  node7  Vdd CMOSP W={2*Width_p} L={Length_p}
+Mp12 SUM_   nodeC  node8  Vdd CMOSP W={2*Width_p} L={Length_p}
+
+Mn10 node10 nodeA   Gnd   Gnd CMOSN W={2*Width_n} L={Length_n}
+Mn11 node9  nodeB  node10 Gnd CMOSN W={2*Width_n} L={Length_n}
+Mn12 SUM_   nodeC  node9  Gnd CMOSN W={2*Width_n} L={Length_n}
+
+xinv2 SUM_ Vdd Gnd SUM INVERTER
+
+.ends FA

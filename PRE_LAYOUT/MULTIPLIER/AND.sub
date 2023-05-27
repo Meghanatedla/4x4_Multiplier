@@ -1,0 +1,12 @@
+**AND GATE
+
+.INCLUDE NAND.sub
+.INCLUDE INVERTER.sub
+
+.subckt AND nodeA nodeB Vdd Gnd nodeC
+
+xNAND nodeA nodeB Vdd Gnd nodeZ NAND
+xINV nodeZ Vdd Gnd nodeC INVERTER
+
+.ends AND
+

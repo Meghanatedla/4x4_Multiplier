@@ -1,0 +1,99 @@
+*** 4 BIT MULTIPLIER
+.INCLUDE 22nm_MGK.pm
+
+.INCLUDE AND.sub
+.INCLUDE HA.sub
+.INCLUDE FA.sub
+*PARAMETERS
+.PARAM X=22nm
+
+.PARAM Width_p=X
+.PARAM Length_p=X
+
+.PARAM Width_n=X
+.PARAM Length_n=X
+
+.PARAM supply=1
+.PARAM tr=10p
+
+.global gnd vdd
+
+.temp 25
+
+*NET-LIST
+
+* Inputs: A3 A2 A1 A0   B3 B2 B1 B0
+* Outputs: C S6 S5 S4 S3 S2 S1 S0
+* 16 AND gates
+* 4 Half adders
+* 8 Full adders
+* Inputs nodes to HA  is given as HA_ax HA_bx (x = 1, 2, 3, 4)
+* Inputs nodes to FA  is given as FA_ax FA_bx FA_cx (x = 1, 2, 3, 4, 5, 6, 7, 8)
+
+xAnd1   A0 B0 vdd gnd  S0   AND
+xAnd2   A0 B1 vdd gnd HA_a1 AND
+xAnd3   A1 B0 vdd gnd HA_b1 AND
+xAnd4   A0 B2 vdd gnd FA_a1 AND
+xAnd5   A2 B0 vdd gnd HA_a2 AND
+xAnd6   A1 B1 vdd gnd HA_b2 AND
+xAnd7   A1 B2 vdd gnd FA_a3 AND
+xAnd8   A0 B3 vdd gnd FA_b2 AND
+xAnd9   A3 B0 vdd gnd HA_a4 AND
+xAnd10  A2 B1 vdd gnd HA_b4 AND
+xAnd11  A2 B2 vdd gnd FA_a7 AND
+xAnd12  A3 B1 vdd gnd FA_b7 AND
+xAnd13  A1 B3 vdd gnd FA_b4 AND
+xAnd14  A2 B3 vdd gnd FA_a8 AND
+xAnd15  A3 B2 vdd gnd FA_b8 AND
+xAnd16  A3 B3 vdd gnd FA_b6 AND
+
+xHA1 HA_a1 HA_b1 vdd gnd  S1   FA_c1 HA
+xHA2 HA_a2 HA_b2 vdd gnd FA_b1 FA_c3 HA
+xHA3 HA_a3 HA_b3 vdd gnd  S4   FA_c5 HA
+xHA4 HA_a4 HA_b4 vdd gnd FA_b3 FA_c7 HA
+
+xFA1 FA_a1 FA_b1 FA_c1 vdd gnd  S2   FA_c2 FA
+xFA2 FA_a2 FA_b2 FA_c2 vdd gnd  S3   HA_a3 FA
+xFA3 FA_a3 FA_b3 FA_c3 vdd gnd FA_a2 FA_c4 FA
+xFA4 FA_a4 FA_b4 FA_c4 vdd gnd HA_b3 FA_a5 FA
+xFA5 FA_a5 FA_b5 FA_c5 vdd gnd  S5   FA_c6 FA
+xFA6 FA_a6 FA_b6 FA_c6 vdd gnd  S6     C   FA
+xFA7 FA_a7 FA_b7 FA_c7 vdd gnd FA_a4 FA_c8 FA
+xFA8 FA_a8 FA_b8 FA_c8 vdd gnd FA_b5 FA_a6 FA
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*Capacitive LOAD
+CL1 S0 gnd 0.1f
+CL2 S1 gnd 0.1f
+CL3 S2 gnd 0.1f
+CL4 S3 gnd 0.1f
+CL5 S4 gnd 0.1f
+CL6 S5 gnd 0.1f
+CL7 S6 gnd 0.1f
+CL8 C  gnd 0.1f
+
+*INPUT WAVEFORM
+VA0 A0 gnd 1
+VA1 A1 gnd 1
+VA2 A2 gnd 1
+VA3 A3 gnd 1
+
+VB0 B0 gnd 1
+VB1 B1 gnd 1
+VB2 B2 gnd 1
+VB3 B3 gnd 1
+
+*ANALYSIS
+.op
+
+.CONTROL
+
+op
+let leakage_power = -1*VDD#branch+(v(A0)*(-VA0#branch))+(v(A1)*(-VA1#branch))+(v(A2)*(-VA2#branch)+(v(A3)*(-VA3#branch))+v(B0)*(-VB0#branch))+(v(B1)*(-VB1#branch))+(v(B2)*(-VB2#branch)+(v(B3)*(-VB3#branch)))
+echo "Leakage Power = $&leakage_power">>"4_bit_Multiplier_Pre_Layout_leakage.txt"
+quit
+
+.ENDC
+.END

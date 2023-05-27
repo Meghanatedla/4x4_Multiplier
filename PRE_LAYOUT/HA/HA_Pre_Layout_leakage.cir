@@ -1,0 +1,131 @@
+*** HALF ADDER
+
+.INCLUDE ../TSMC_180nm.txt
+.INCLUDE ../MULTIPLIER/INVERTER.sub
+
+*PARAMETERS
+.PARAM X=90nm
+
+.PARAM Width_p=4*X
+.PARAM Length_p=2*X
+
+.PARAM Width_n=2*X
+.PARAM Length_n=2*X
+
+.PARAM supply=1
+.global gnd vdd
+
+.temp 25
+
+*NET-LIST
+
+*HALF ADDER
+
+*SUM
+*       -------------------VDD
+*           |            |                     
+*   A' -- |Mp1|  A  -- |Mp3|                   
+*           |            |  
+*  node1-----            -----node2
+*           |            |                   
+*   B  -- |Mp2|  B' -- |Mp4|        
+*           |____________|
+*                 |                  
+*                 ---------SUM
+*                 |  
+*           ______|______                
+*           |            |                     
+*   A' -- |Mn1|   A -- |Mn3|                   
+*           |            |    
+*  node3-----            -----node4
+*           |            |                     
+*   B' -- |Mn2|   B -- |Mn4|        
+*           |____________|
+*                 |                         
+*        -----------------GND
+
+*CARRY
+*       ----------------------------------------VDD
+*          |           |                     |
+*   A -- |Mp5|   B --|Mp6|                   |
+*          |           |                     |
+*          -------------             ______|Mp7|
+*                |                  |        |
+*                ---------node5-----|        |--------CARRY
+*                |                  |        |
+*         A -- |Mn5|                |______|Mn7|
+*                |________node6              |
+*                |                           |
+*         B -- |Mn6|                         |
+*                |                           |
+*        ---------------------------------------GND
+
+*A and B are INPUTS
+*A and A_
+xinv1 A vdd gnd A_ INVERTER
+
+*B and B_
+xinvv2 B vdd gnd B_ INVERTER
+
+Mp1 node1   A_     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp2 SUM     B     node1  vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp3 node2   A      vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp4 SUM     B_    node2  vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn1 SUM     A_    node3  gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn2 node3   B_     gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn3 SUM     A     node4  gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn4 node4   B      gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+
+Mp5 node5    A     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mp6 node5    B     vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn5 node5    A    node6  gnd   CMOSN W={2*Width_n} L={Length_n}
+Mn6 node6    B     gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+Mp7 CARRY  node5   vdd   vdd   CMOSP W={2*Width_p} L={Length_p}
+Mn7 CARRY  node5   gnd   gnd   CMOSN W={2*Width_n} L={Length_n}
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+*Capacitive LOAD
+CL1 SUM gnd 2f
+CL2 CARRY gnd 2f
+
+*INPUT WAVEFORM
+VinA A gnd 0
+VinB B gnd 0
+
+*ANALYSIS
+.op
+
+*CONTROL COMMANDS
+.CONTROL
+    alter VinA = 0
+    alter VinB = 0
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 0 VB = 0">>"HA_Pre_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"HA_Pre_Layout_leakage.txt"
+
+    alter VinA = 0
+    alter VinB = 1
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 0 VB = 1">>"HA_Pre_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"HA_Pre_Layout_leakage.txt"
+
+    alter VinA = 1
+    alter VinB = 0
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 1 VB = 0">>"HA_Pre_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"HA_Pre_Layout_leakage.txt"
+
+    alter VinA = 1
+    alter VinB = 1
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 1 VB = 1">>"HA_Pre_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"HA_Pre_Layout_leakage.txt"
+
+.ENDC
+.END

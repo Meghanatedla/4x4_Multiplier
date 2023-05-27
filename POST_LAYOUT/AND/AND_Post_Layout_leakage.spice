@@ -1,0 +1,79 @@
+* SPICE3 file created from AND.ext - technology: scmos
+
+.include ../TSMC_180nm.txt
+
+.option scale=0.09u
+
+*PARAMETERS
+.param supply=1
+
+.global gnd vdd
+
+*SOURCE
+VDD vdd gnd 'supply'
+
+
+M1000 C node1 VDD w_n24_n5# CMOSP w=8 l=2
++  ad=40 pd=26 as=120 ps=78
+M1001 VDD B node1 w_n24_n5# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1002 node1 B a_n11_n27# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1003 node1 A VDD w_n24_n5# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 C node1 GND Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=40 ps=36
+M1005 a_n11_n27# A GND Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 B node1 0.12fF
+C1 A B 0.16fF
+C2 VDD node1 0.22fF
+C3 GND node1 0.23fF
+C4 w_n24_n5# VDD 0.20fF
+C5 w_n24_n5# node1 0.10fF
+C6 VDD C 0.11fF
+C7 GND Gnd 0.19fF
+C8 node1 Gnd 0.26fF
+C9 B Gnd 0.21fF
+C10 A Gnd 0.18fF
+C11 w_n24_n5# Gnd 1.21fF
+
+*INPUT WAVEFORM
+VinA A gnd 0
+VinB B gnd 0
+
+*ANALYSIS
+.op
+
+*CONTROL COMMANDS
+.CONTROL
+    alter VinA = 0
+    alter VinB = 0
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 0 VB = 0">>"AND_Post_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"AND_Post_Layout_leakage.txt"
+
+    alter VinA = 0
+    alter VinB = 1
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 0 VB = 1">>"AND_Post_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"AND_Post_Layout_leakage.txt"
+
+    alter VinA = 1
+    alter VinB = 0
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 1 VB = 0">>"AND_Post_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"AND_Post_Layout_leakage.txt"
+
+    alter VinA = 1
+    alter VinB = 1
+    op
+    let leakage_power = -1*VDD#branch+(v(A)*(-VinA#branch))+(v(B)*(-VinB#branch))
+    echo "VA = 1 VB = 1">>"AND_Post_Layout_leakage.txt"
+    echo "Leakage Power = $&leakage_power">>"AND_Post_Layout_leakage.txt"
+
+.ENDC
+.END

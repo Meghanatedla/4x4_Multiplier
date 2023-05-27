@@ -1,0 +1,11 @@
+**NOT GATE 
+
+.subckt INVERTER nodeIN Vdd Gnd nodeOUT
+
+Mp1 nodeOUT nodeIN Vdd Vdd CMOSP W={2*Width_p} L={Length_p} 
+Mn1 nodeOUT nodeIN Gnd Gnd CMOSN W={2*Width_n} L={Length_n} 
+
+
+.ends INVERTER
+
+
